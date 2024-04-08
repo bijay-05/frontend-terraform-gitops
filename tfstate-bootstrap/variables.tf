@@ -1,5 +1,5 @@
 variable "default_tags" {
-  type = map()
+  type = map(string)
   default = {
     Project   = "Intern"
     Creator   = "bijay@gmail.com"
