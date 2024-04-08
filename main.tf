@@ -4,10 +4,10 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket         = "ishwar-gitops-tf-state-bucket"
-    key            = "terraform.ishwar.tfstate"
+    bucket         = "bijay-tfstate-bucket"
+    key            = "terraform.bijay.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "ishwar_tf_state"
+    dynamodb_table = "bijay_tfstate_table"
     encrypt        = true
   }
 }
@@ -18,7 +18,7 @@ resource "aws_s3_bucket" "frontend-bucket" {
   tags = merge(
     var.default_tags,
     {
-      "Name" = "ishwar-s3-bucket"
+      "Name" = "bijay-frontend-bucket"
     }
   )
 
