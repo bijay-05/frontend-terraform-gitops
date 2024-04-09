@@ -10,7 +10,7 @@ variable "frontend_bucket_name" {
 
 
 variable "default_tags" {
-  type = map()
+  type = map(string)
   default = {
     Project   = "Intern"
     Creator   = "bijay@gmail.com"
